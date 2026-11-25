@@ -1,25 +1,56 @@
 # PDF RAG Chatbot
 
-A Retrieval Augmented Generation (RAG) chatbot built using LangChain, Qdrant, FastEmbed, and NVIDIA Nemotron.
+## Overview
 
-## Tech Stack
-
-- LangChain
-- FastEmbed
-- Qdrant
-- NVIDIA Nemotron
-- Python
+A Retrieval-Augmented Generation (RAG) chatbot built using LangChain, Qdrant, FastEmbed, and NVIDIA AI to answer questions from PDF documents.
 
 ## Features
 
-- PDF Loading
-- Text Chunking
-- Embedding Generation
-- Vector Search
-- Retrieval Augmented Generation
+- PDF document loading
+- Text chunking
+- Vector embeddings
+- Semantic search
+- Qdrant vector database
+- Context-aware answer generation
+
+## Architecture
+
+PDF → Chunking → Embeddings → Qdrant → Retriever → NVIDIA LLM → Answer
+
+## Technologies Used
+
+- Python
+- LangChain
+- FastEmbed
+- Qdrant
+- NVIDIA AI Endpoints
+
+## Demo Output
+
+![Output](screenshots/output.png)
+
+### Sample Query
+
+```text
+What are the normal equations for fitting a straight line using least squares?
+```
+
+### Sample Response
+
+```text
+Σy = na + bΣx
+
+Σxy = aΣx + bΣx²
+```
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Run
 
-pip install -r requirements.txt
-
+```bash
 python main.py
+```
